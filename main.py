@@ -1,3 +1,5 @@
+# Before you run this code, please change the image path, in our experiment, we have three
+# file named 'Aug-imgae', 'Aug-label', 'test' which all in 'content3' file
 import numpy as np
 import os
 import matplotlib.pyplot as plt
@@ -47,7 +49,7 @@ plt.legend()
 plt.show()
 model.save('hybrid-content3.h5')
 time2 = datetime.now()
-print('共花费时间%d秒'%((time2-time1).seconds))
+print('Total time is %ds'%((time2-time1).seconds))
 
 for i in range(4):
     output = model.predict(np.expand_dims(x_train[3+i, :, :, :], axis=0))
