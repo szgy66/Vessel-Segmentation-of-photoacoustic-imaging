@@ -5,8 +5,8 @@ from keras.models import load_model
 from datetime import datetime
 
 a = datetime.now()
-file_path = "D:/Desktop/result"
-xpath = os.path.join(file_path, "image")
+file_path = "./content3/"
+xpath = os.path.join(file_path, "test")
 data = os.listdir(xpath)
 
 x_train = np.zeros((len(data), 256, 256))
